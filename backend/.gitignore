@@ -1,0 +1,27 @@
+# Build output
+/target/
+
+# Environment variables
+.env
+
+# IDE settings
+/.idea/
+*.iml
+/.vscode/
+
+# MacOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Maven wrapper
+.mvn/
+mvnw
+mvnw.cmd
+
+# Java
+*.class
+
+# Spring Boot
+spring-boot-app.log

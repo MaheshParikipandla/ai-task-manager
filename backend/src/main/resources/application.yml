@@ -1,0 +1,25 @@
+spring:
+  config:
+    import: optional:dotenv
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/task_manager}
+    username: ${DB_USERNAME:task_user}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: false
+    locations: classpath:db/migration
+server:
+  port: 8080
+
+# AI integration (optional)
+ai:
+  base-url: ${AI_BASE_URL:}
+  # API key must be provided via environment variable AI_API_KEY
+  enabled: ${AI_API_KEY:}
