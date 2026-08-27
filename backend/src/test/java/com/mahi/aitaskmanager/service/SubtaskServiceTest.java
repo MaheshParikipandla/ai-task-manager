@@ -85,7 +85,7 @@ class SubtaskServiceTest {
         subtask.setCreatedAt(LocalDateTime.now());
         subtask.setUpdatedAt(LocalDateTime.now());
 
-        when(subtaskRepository.findByTaskIdOrderByOrdAsc(2L)).thenReturn(List.of(subtask));
+        when(subtaskRepository.findByTaskIdOrderByOrdAsc(1L)).thenReturn(List.of(subtask));
 
         List<SubtaskResponse> response = subtaskService.getSubtasks(2L);
 
